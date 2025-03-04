@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>漫画ページ</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: white;
-    }
-    .comic-container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .comic-image {
-      max-width: 100%;
-      height: auto;
-    }
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".comic-container");
+    const images = ["1.png", "2.png", "3.png"]; // ここに用意した画像をリスト化
 
-  </style>
-</head>
-<body>
-  <div class="comic-container">
-    <img class="comic-image" src="1.png" alt="漫画ページ1">
-    <img class="comic-image" src="2.png" alt="漫画ページ2">
-    <img class="comic-image" src="3.png" alt="漫画ページ3">
-    <img class="comic-image" src="4.png" alt="漫画ページ4">
-    <img class="comic-image" src="5.png" alt="漫画ページ5">
-    <img class="comic-image" src="6.png" alt="漫画ページ6">
-    <img class="comic-image" src="7.png" alt="漫画ページ7">
-    <img class="comic-image" src="8.png" alt="漫画ページ8">
-    <img class="comic-image" src="9.png" alt="漫画ページ9">
-    <img class="comic-image" src="10.png" alt="漫画ページ10">
-  </div>
-</body>
-</html>
+    images.forEach(src => {
+      let img = document.createElement("img");
+      img.src = src;
+      img.alt = "漫画ページ";
+      img.classList.add("comic-image");
+      container.appendChild(img);
+    });
+  });
+</script>
